@@ -38,16 +38,18 @@
           contain
       />
         <div class="up-content">
-          <div style="margin-left: 100px;">
-            科技创造未来
+          <div style="margin-left: 30px;">
+            科技拥抱未来
           </div>
-          <div style="margin-left: 150px;">
+          <div style="margin-left: 70px;">
             未来拥抱世界
           </div>
-
-          <div style="margin-left: 300px;font-size: 20px;">
-            Technology creates the future, and the future embraces the world
+          <div style="margin-top: 60px; margin-left: 160px;font-size: 36px;">
+            Technology creates the future,
           </div>
+          <div style="margin-left: 230px;font-size: 36px;">
+            Future embraces the world.
+        </div>
         </div>
       </div>
 
@@ -55,7 +57,7 @@
 <!--  总的一些话    -->
       <div style="position: relative;">
         <v-img
-            :src="require('./assets/toAll.jpg')"
+            :src="require('./assets/toAll.png')"
             contain
         />
         <div class="content-image">
@@ -87,7 +89,7 @@
         >
         </v-carousel-item>
         </v-carousel>
-        <div style="margin-top: 20px;text-align: center;font-size: 35px;">{{options[swiperIndex].title}}</div>
+          <div style="margin-top: 20px;text-align: center;font-size: 35px; color: #188872"><strong>{{options[swiperIndex].title}}</strong></div>
         <div style="margin-top: 20px;text-align: center;font-size: 20px;">{{options[swiperIndex].content}}</div>
       </div>
 <!--   研究团队   -->
@@ -98,11 +100,13 @@
                 width="20%"
         />
       </div>
-      <div style="width: 70%;margin-left: 15%">
+      <div style="width: 100%">
         <div>
-          <v-card dark width="70%" style="margin-left: 15%;margin-top: 20px">
-            <v-card-title class="purple lighten-2">
-              <h2 class="display-1 white--text font-weight-light">首席科学家：容淳铭院士</h2>
+          <v-card dark width="30%" style="margin-left: 2.5%;margin-top: 20px; display: inline-block">
+            <v-card-title class="lighten-2" style="background-color: #188872">
+              <h2 class="display-1 white--text font-weight-light">首席科学家：<br>
+                <a href="https://www.qdiap.com/index.php/content/142" style="text-decoration: none; color: white">容淳铭院士</a>
+              </h2>
             </v-card-title>
             <v-container>
               <v-row>
@@ -114,9 +118,11 @@
               </v-row>
             </v-container>
           </v-card>
-          <v-card dark width="70%" style="margin-left: 15%;margin-top: 20px">
-            <v-card-title class="purple lighten-2">
-              <h2 class="display-1 white--text font-weight-light">首席顾问专家：黎子良院士</h2>
+          <v-card dark width="30%" style="margin-left: 2.5%;margin-top: 20px; display: inline-block">
+            <v-card-title class="lighten-2" style="background-color: #188872">
+              <h2 class="display-1 white--text font-weight-light">首席顾问专家：<br>
+                <a href="https://statistics.stanford.edu/people/tze-leung-lai" style="text-decoration: none; color: white">黎子良院士</a>
+              </h2>
             </v-card-title>
             <v-container>
               <v-row>
@@ -124,15 +130,16 @@
                   美国数理统计学院院士，台湾中央研究院院士，美国统计学会会士。美国斯坦福大学统计系教授、统计系原系主任，
                   斯坦福金融工程学院计算和数学工程研究所荣誉院士，斯坦福金融数学工程、金融与风险建模研究所主管。
                   1983年获国际统计学界COPSS奖(被视为国际统计学“诺贝尔”奖)，系该奖首位华人得主。已出版学术专著10余部，
-                  发表科研论文270余篇，指导已毕业的博士60余人。他2008年出版的《金融市场的数学模型和方法论》，
-                  2013年出版的《动态风险管理：金融模型与数学模型》以及《算法交易和量化科学》已经成为斯坦福大学的必修课教材。
+                  发表科研论文270余篇，指导已毕业的博士60余人。
                 </v-col>
               </v-row>
             </v-container>
           </v-card>
-          <v-card dark width="70%" style="margin-left: 15%;margin-top: 20px">
-            <v-card-title class="purple lighten-2">
-              <h2 class="display-1 white--text font-weight-light">执行负责人：丁晓蔚博士</h2>
+          <v-card dark width="30%" style="margin-left: 2.5%;margin-top: 20px; display: inline-block">
+            <v-card-title class="lighten-2" style="background-color: #188872">
+              <h2 class="display-1 white--text font-weight-light">执行负责人：<br>
+                <a href="https://im.nju.edu.cn/dxy1/list.htm" style="text-decoration: none; color: white">丁晓蔚博士</a>
+              </h2>
             </v-card-title>
             <v-container>
               <v-row>
@@ -147,9 +154,9 @@
           </v-card>
         </div>
       </div>
-      <v-timeline :dense="$vuetify.breakpoint.smAndDown" dark>
+      <v-timeline :dense="$vuetify.breakpoint.smAndDown" style="margin-top: 100px; background-color: white">
         <v-timeline-item
-                color="purple lighten-2"
+                color="black purple lighten-2"
                 fill-dot
                 right
         >
@@ -159,8 +166,8 @@
             </v-card-title>
             <v-container>
               <v-row>
-                <v-col cols="12" md="10">
-                  区块链的介绍
+                <v-col cols="12">
+                  区块链涉及数学、密码学、互联网和计算机编程等很多科学技术问题。从应用视角来看，简单来说，区块链是一个分布式的共享账本和数据库，具有去中心化、不可篡改、全程留痕、可以追溯、集体维护、公开透明等特点。
                 </v-col>
               </v-row>
             </v-container>
@@ -175,12 +182,12 @@
         >
           <v-card style="margin-left: 100px">
             <v-card-title class="red lighten-2">
-              <h2 class="display-1 white--text font-weight-light">人工智能</h2>
+              <h2 class="display-1 white--text font-weight-light" style="width: 100%;text-align: right">人工智能</h2>
             </v-card-title>
             <v-container>
               <v-row>
-                <v-col cols="12" md="10">
-                  人工智能的介绍
+                <v-col cols="12" style="width: 100%;">
+                  人工智能是计算机科学的一个分支，它企图了解智能的实质，并生产出一种新的能以人类智能相似的方式做出反应的智能机器，该领域的研究包括机器人、语言识别、图像识别、自然语言处理和专家系统等。
                 </v-col>
               </v-row>
             </v-container>
@@ -198,8 +205,8 @@
             </v-card-title>
             <v-container>
               <v-row>
-                <v-col cols="12" md="10">
-                  大数据
+                <v-col cols="12" style="width: 100%">
+                  “大数据”是需要新处理模式才能具有更强的决策力、洞察发现力和流程优化能力来适应海量、高增长率和多样化的信息资产。大数据技术的战略意义不在于掌握庞大的数据信息，而在于对这些含有意义的数据进行专业化处理。
                 </v-col>
               </v-row>
             </v-container>
@@ -214,12 +221,12 @@
         >
           <v-card style="margin-left: 100px">
             <v-card-title class="blue lighten-2">
-              <h2 class="display-1 white--text font-weight-light">FinTech4Good工作部</h2>
+              <h2 class="display-1 white--text font-weight-light" style="width: 100%;text-align: right">FinTech4Good工作部</h2>
             </v-card-title>
             <v-container>
               <v-row>
-                <v-col cols="12" md="10">
-                  FinTech4Good工作部
+                <v-col cols="12" style="width: 100%;">
+                  南京大学普惠·三农科技创新研究中心下设的公益金融科技工作部(FinTech4Good工作部)聚集了一批敢作为敢担当、以梦为马的青年群体，构建起公益创业项目️“基于区块链+可信大数据AI的三农互助金融服务平台项目”。 FinTech4Good工作部力图通过区块链与可信大数据AI技术为农村打造金融+科技平台，切实助力三农问题，服务乡村振兴
                 </v-col>
               </v-row>
             </v-container>
@@ -227,7 +234,7 @@
         </v-timeline-item>
       </v-timeline>
 <!--   模块介绍   -->
-      <div style="margin-top: 10px;">
+      <div style="margin-top: 10px; background-color: white; padding-bottom: 180px">
         <v-img
             src="./assets/model1.png"
             contain
@@ -239,14 +246,14 @@
 <!--          平台从学术向社会延伸，一方面“请进来”，邀请了国内外区块链、大数据、人工智能、金融科技理论与实务的诸多专家，邀请到海外院士对团队进行指导。此外，通过“走出去”的方式，获得接受更多专家大咖指点和评判、与国内外同学们交流切磋的机会。项目旨在让青年学生快速理解区块链创新应用模式对金融业务的改造，领悟新技术对商业模式的改变与应用价值，从而激发青年们的创新意识，培养区块链思维与能力，使青年学生们紧紧跟上科技创新的脚步和金融发展的步伐，并近距离跟踪行业前沿。-->
 <!--        </div>-->
 <!-- 选择区 -->
-        <v-item-group mandatory>
+        <v-item-group mandatory style="background-color: white">
           <v-container>
             <v-row>
               <v-col
                       v-for="(item,i) in humans"
                       :key="i"
                       cols="12"
-                      md="4"
+                      md="6"
               >
                 <v-item v-slot:default="{ active, toggle }" :value="groupIndex">
                   <v-card
@@ -271,33 +278,10 @@
           </v-container>
         </v-item-group>
 
-        <div style="width: 60%;margin-left: 20%">
+        <div style="width: 60%;margin-left: 20%; color: black;">
           {{humans[groupIndex].content}}
         </div>
 
-      </div>
-<!--      模块2 -->
-      <div style="margin-top: 20px"></div>
-      <v-img
-              src="./assets/model2.png"
-              contain
-      />
-      <div style="width: 80%;margin-left: 10%">
-        <div style="text-align: center;width: 60%;margin-left: 20%">
-        FinTech4Good工作部竭诚地期盼着更多有想法有魄力的青年志愿者的加入。<br>
-        FinTech4Good工作部面向全国范围内的志愿者展开金融+科技培训，包括：<br>
-        </div>
-        <v-card>
-          <div style="font-size: 20px;margin-top: 20px;margin-bottom: 20px">
-            ▲探索产教融合：在实践的同时，导师将带领同学们撰写调研报告、撰写论文著作。<br>
-            ▲理论实践对接：暑期实习、农村实践。面向创新创业、实训实践的“请进来”，“走出去”。<br>
-            ▲实现思专融合：鼓励金融向善、大数据向善，培养青年们胸怀天下的情怀和责任。<br>
-          </div>
-        </v-card>
-        <div style="text-align: center;">
-        在本次项目中表现优秀的志愿者们，将被选拔成为本项目花旗杯参赛队员，并获得研究中心FinTech4Good工作部正式职位；<br>更有南京大学金融科技研究中心工作证明和实习证明、中英文推荐信、论文专利署名等多重福利。<br>
-        我们欢迎各方面有才华并愿意投入时间的同学们自荐加盟，<br>特别欢迎在公益创业、组织管理、宣传推广、实践调研、融资运营、编程开发等方面有特长的小伙伴加盟！<br>也欢迎有志于用金融+科技武装自己的未来新型选调生和大学生村官小伙伴加盟！
-        </div>
       </div>
 
       <div style="text-align: center;font-size: 40px;margin-top: 50px;">
@@ -316,14 +300,18 @@
     </v-content>
 <!--  底部  -->
     <v-footer
-            color="black"
+            color="#545454"
     >
       <v-col
           class="text-center"
           cols="12"
       >
-        <div style="color:#fff;">
-        {{ new Date().getFullYear() }} @ <strong>南京大学三农平台</strong>
+        <div style="color:#fff; background-color: #545454;">
+          {{ new Date().getFullYear() }} @ <strong>南京大学普惠·三农金融科技创新研究中心</strong><br>
+          南京市栖霞区仙林大道163号<br>
+          邮编: 210023<br>
+          联系方式: blockchainfintech@126.com, blockchainfintech@hotmail.com<br>
+
         </div>
       </v-col>
     </v-footer>
@@ -350,19 +338,19 @@ export default {
     swiperIndex:0,
     items: [
       {
-        src: 'https://oss-lizehao.oss-cn-beijing.aliyuncs.com/sanNong/1.jpg',
+        src: "https://colarhua-pic.oss-cn-shenzhen.aliyuncs.com/gary-jw-3/1.jpg",
       },
       {
-        src: 'https://oss-lizehao.oss-cn-beijing.aliyuncs.com/sanNong/2.jpg',
+        src: 'https://colarhua-pic.oss-cn-shenzhen.aliyuncs.com/gary-jw-3/2.jpg',
       },
       {
-        src: 'https://oss-lizehao.oss-cn-beijing.aliyuncs.com/sanNong/3.jpg',
+        src: 'https://colarhua-pic.oss-cn-shenzhen.aliyuncs.com/gary-jw-3/3.jpg',
       },
       {
-        src: 'https://oss-lizehao.oss-cn-beijing.aliyuncs.com/sanNong/4.jpg',
+        src: 'https://colarhua-pic.oss-cn-shenzhen.aliyuncs.com/gary-jw-3/4.jpg',
       },
       {
-        src: 'https://oss-lizehao.oss-cn-beijing.aliyuncs.com/sanNong/4.jpg',
+        src: 'https://colarhua-pic.oss-cn-shenzhen.aliyuncs.com/gary-jw-3/5.jpg\n',
       },
     ],
     options:[{title:"可信",content:"区块链、大数据和人工智能可以帮助提供更为可信、更为全面的金融大数据，为解决经济和社会中现存的挑战提供更为可靠的数据背景和改良指南。"},
@@ -374,7 +362,7 @@ export default {
     humans:[
       {title:"金融+科技创新创业人才培养",content:"南京大学普惠•三农金融科技创新研究中心将以培养跨学科交叉融合的人才为目标，开展更多的教学创新，希望培养一批真正既热爱金融、也热爱科技的优秀人才。从华尔街2008年危机之后来看，金融和科技的融合是大趋势。金融（经济和社会也是一样）的发展可以通过技术来驱动，因此金融人才要懂技术；而技术人才也要懂金融，那样才能对金融的内在规律特别是风险有一颗敬畏之心。而且要用金融+科技武装他们的头脑，解决金融、经济、社会痛点问题，为祖国经济社会进步服务。"},
       {title:"公益金融+科技人才培养",content:"温度和时代使命感是当下金融人才的必备素养。南京大学普惠三农金融科技创新研究中心公益金融科技(FinTech4Good)工作组，简称“ 南京大学公益金融科技(FinTech4Good)团队”（这是以后行走江湖的名号）正在着力孵化项目“基于区块链可信大数据人工智能的三农金融创新和人才培养服务平台”，服务于祖国全面建成小康社会的目标实现。"},
-      {title:"FinTech4Good工作部网页",content:"南京大学普惠·三农科技创新研究中心下设的公益金融科技工作部(FinTech4Good工作部)聚集了一批敢作为敢担当、以梦为马的青年群体，构建起公益创业项目️“基于区块链+可信大数据AI的三农互助金融服务平台项目”。 FinTech4Good工作部力图通过区块链与可信大数据AI技术为农村打造金融+科技平台，切实助力三农问题，服务乡村振兴。"}
+      // {title:"FinTech4Good工作部网页",content:"南京大学普惠·三农科技创新研究中心下设的公益金融科技工作部(FinTech4Good工作部)聚集了一批敢作为敢担当、以梦为马的青年群体，构建起公益创业项目️“基于区块链+可信大数据AI的三农互助金融服务平台项目”。 FinTech4Good工作部力图通过区块链与可信大数据AI技术为农村打造金融+科技平台，切实助力三农问题，服务乡村振兴。"}
     ]
 
   }),
@@ -389,22 +377,22 @@ export default {
   }
   .content-image{
     position:absolute;
-    left:calc(50% - 100px);
-    bottom:60%;
+    left:calc(21%);
+    top: 22%;
     font-size: 40px;
   }
   .detail-image{
     position:absolute;
-    left:calc(20%);
-    right:calc(20%);
-    bottom:40%;
+    left:calc(10%);
+    right:calc(50%);
+    top: 37%;
     font-size: 20px;
   }
   .up-content{
     position:absolute;
-    bottom:10px;
+    bottom:25%;
     color:white;
-    font-size: 100px;
-    text-shadow:#000 0px 0px 5px;
+    font-size: 85px;
+    text-shadow:#000 5px 5px 5px;
   }
 </style>
