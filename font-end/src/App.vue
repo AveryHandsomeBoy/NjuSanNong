@@ -9,7 +9,7 @@
                 <v-img
                         alt="NJU Logo"
                         class="shrink mr-2" contain
-                        src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+                        :src="schoolIcon"
                         transition="scale-transition"
                         width="40"
                 />
@@ -32,26 +32,42 @@
         </v-app-bar>
         <v-content class="page">
             <!--      第一张图片  -->
-            <div style="position: relative;">
-                <v-img
-                        :src="require('./assets/bgImage.jpg')"
-                        contain
-                />
-                <div class="up-content">
-                    <div style="margin-left: 30px;">
-                        科技拥抱未来
-                    </div>
-                    <div style="margin-left: 70px;">
-                        未来拥抱世界
-                    </div>
-                    <div style="margin-top: 60px; margin-left: 160px;font-size: 36px;">
-                        Technology creates the future,
-                    </div>
-                    <div style="margin-left: 230px;font-size: 36px;">
-                        Future embraces the world.
-                    </div>
-                </div>
+            <div style="width: 100%;text-align: center;">
+                <v-carousel
+                        cycle
+                        v-model="swiperIndex1"
+                        show-arrows-on-hover
+                        height="100%"
+                >
+                    <v-carousel-item
+                            v-for="(item,i) in items1"
+                            :key="i"
+                            :src="item.src"
+                    >
+                    </v-carousel-item>
+                </v-carousel>
             </div>
+
+<!--            <div style="position: relative;">-->
+<!--                <v-img-->
+<!--                        :src="require('./assets/bgImage.jpg')"-->
+<!--                        contain-->
+<!--                />-->
+<!--                <div class="up-content">-->
+<!--                    <div style="margin-left: 30px;">-->
+<!--                        科技拥抱未来-->
+<!--                    </div>-->
+<!--                    <div style="margin-left: 70px;">-->
+<!--                        未来拥抱世界-->
+<!--                    </div>-->
+<!--                    <div style="margin-top: 60px; margin-left: 160px;font-size: 36px;">-->
+<!--                        Technology creates the future,-->
+<!--                    </div>-->
+<!--                    <div style="margin-left: 230px;font-size: 36px;">-->
+<!--                        Future embraces the world.-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
 
 
             <!--  总的一些话    -->
@@ -97,17 +113,17 @@
                 <div style="margin-top: 20px;text-align: center;font-size: 20px;">{{options[swiperIndex].content}}</div>
             </div>
             <!--   研究团队   -->
-            <div style="text-align: center;margin-top: 20px">
+            <div style="text-align: center;margin-top: 100px">
                 <img
                         :src="require('./assets/title2.png')"
                         contain
                         width="20%"
                 />
             </div>
-            <div style="width: 100%">
+            <div style="width: 100%;text-align: center">
                 <div>
-                    <v-card dark width="30%" style="margin-left: 2.5%;margin-top: 20px; display: inline-block">
-                        <v-card-title class="lighten-2" style="background-color: #188872">
+                    <v-card dark width="25%" style="margin-left: 2.5%; display: inline-block">
+                        <v-card-title class="lighten-2" style="background-color: #188872;">
                             <h2 class="display-1 white--text font-weight-light">首席科学家：<br>
                                 <a href="https://www.qdiap.com/index.php/content/142"
                                    style="text-decoration: none; color: white">容淳铭院士</a>
@@ -123,7 +139,7 @@
                             </v-row>
                         </v-container>
                     </v-card>
-                    <v-card dark width="30%" style="margin-left: 2.5%;margin-top: 20px; display: inline-block">
+                    <v-card dark width="25%" style="margin-left: 2.5%;margin-top: 20px; display: inline-block">
                         <v-card-title class="lighten-2" style="background-color: #188872">
                             <h2 class="display-1 white--text font-weight-light">首席顾问专家：<br>
                                 <a href="https://statistics.stanford.edu/people/tze-leung-lai"
@@ -141,7 +157,7 @@
                             </v-row>
                         </v-container>
                     </v-card>
-                    <v-card dark width="30%" style="margin-left: 2.5%;margin-top: 20px; display: inline-block">
+                    <v-card dark width="25%" style="margin-left: 2.5%;margin-top: 20px; display: inline-block">
                         <v-card-title class="lighten-2" style="background-color: #188872">
                             <h2 class="display-1 white--text font-weight-light">执行负责人：<br>
                                 <a href="https://im.nju.edu.cn/dxy1/list.htm"
@@ -161,7 +177,7 @@
                     </v-card>
                 </div>
             </div>
-            <v-timeline :dense="$vuetify.breakpoint.smAndDown" style="margin-top: 100px; background-color: white">
+            <v-timeline :dense="$vuetify.breakpoint.smAndDown" style="margin-top: 100px; background-color: black">
                 <v-timeline-item
                         color="black purple lighten-2"
                         fill-dot
@@ -169,7 +185,7 @@
                 >
                     <v-card style="margin-right: 100px">
                         <v-card-title class="purple lighten-2">
-                            <h2 class="display-1 white--text font-weight-light">区块链</h2>
+                            <h2 class="display-1 white--text font-weight-light">区块链实验室</h2>
                         </v-card-title>
                         <v-container>
                             <v-row>
@@ -190,7 +206,7 @@
                     <v-card style="margin-left: 100px">
                         <v-card-title class="red lighten-2">
                             <h2 class="display-1 white--text font-weight-light" style="width: 100%;text-align: right">
-                                人工智能</h2>
+                                人工智能实验室</h2>
                         </v-card-title>
                         <v-container>
                             <v-row>
@@ -209,7 +225,7 @@
                 >
                     <v-card style="margin-right: 100px">
                         <v-card-title class="green lighten-2">
-                            <h2 class="display-1 white--text font-weight-light">大数据</h2>
+                            <h2 class="display-1 white--text font-weight-light">大数据实验室</h2>
                         </v-card-title>
                         <v-container>
                             <v-row>
@@ -244,11 +260,13 @@
                 </v-timeline-item>
             </v-timeline>
             <!--   模块介绍   -->
-            <div style="margin-top: 10px; background-color: white; padding-bottom: 180px">
-                <v-img
-                        src="./assets/model1.png"
-                        contain
-                />
+            <v-img
+                    src="./assets/人才培养/title.png"
+                    style="width: 30%;margin-left: 35%"
+                    contain
+            />
+            <div style="background-color: black;">
+
                 <!--        <div style="text-align: center;width: 60%;margin-left: 20%">-->
                 <!--          南京大学普惠•三农金融科技创新研究中心力图打造成一个多层次、多内涵、成体系的区块链+金融科技创新创业人才培养平台。创新的人才要用创新的方法来培养，通过理论和实践活动，既体现了基于问题导向的学习(Problem-Based Learning)，也体现了基于实践的学习(Practice-Based Learning)，为区块链+人工智能与新金融创新的课程建设提供了有力的支撑。-->
                 <!--        </div>-->
@@ -256,19 +274,18 @@
                 <!--          平台从学术向社会延伸，一方面“请进来”，邀请了国内外区块链、大数据、人工智能、金融科技理论与实务的诸多专家，邀请到海外院士对团队进行指导。此外，通过“走出去”的方式，获得接受更多专家大咖指点和评判、与国内外同学们交流切磋的机会。项目旨在让青年学生快速理解区块链创新应用模式对金融业务的改造，领悟新技术对商业模式的改变与应用价值，从而激发青年们的创新意识，培养区块链思维与能力，使青年学生们紧紧跟上科技创新的脚步和金融发展的步伐，并近距离跟踪行业前沿。-->
                 <!--        </div>-->
                 <!-- 选择区 -->
-                <v-item-group mandatory style="background-color: white">
+                <v-item-group mandatory style="background-color: black;">
                     <v-container>
-                        <v-row>
-                            <v-col
+                        <div style="display: flex;justify-content: center">
+                            <div
                                     v-for="(item,i) in humans"
                                     :key="i"
-                                    cols="12"
-                                    md="6"
+                                    style="width: 30%;"
                             >
-                                <v-item v-slot:default="{ active, toggle }" :value="groupIndex">
+                                <v-item v-slot:default="{ active, toggle }" :value="groupIndex" :style="i==1?'margin-left:20px':''">
                                     <v-card
                                             :color="i==groupIndex ? 'primary' : ''"
-                                            class="d-flex align-center"
+                                            class="d-flex align-center justify-center"
                                             dark
                                             height="100"
                                             @click="changeIndex(i)"
@@ -283,15 +300,16 @@
                                         </v-scroll-y-transition>
                                     </v-card>
                                 </v-item>
-                            </v-col>
-                        </v-row>
+                            </div>
+                        </div>
                     </v-container>
                 </v-item-group>
-                <div style="width: 60%;margin-left: 20%; color: black;">
+                <div style="width: 60%;margin-left: 20%;">
                     {{humans[groupIndex].content}}
                 </div>
             </div>
             <!--    新增部分1    -->
+            <v-img :src="photoArray[Number(tab)]" style="width: 20%;margin-left:40%;margin-top:60px"></v-img>
             <div style="width: 60%;margin-left: 20%;margin-top: 20px">
               <v-card color="grey">
                 <v-tabs
@@ -310,16 +328,19 @@
 <!--                合作机构-->
                 <v-tabs-items v-model="tab" >
                   <div style="background: grey">
-                  <v-tab-item v-for="i in 4" :key="i">
+                  <v-tab-item v-for="(i,index) in 4" :key="i" v-if="index==0">
                     <v-card  dark color="grey" v-for="i in organization" :key="i">
                       <v-card class="mx-auto">
                         <v-img
                                 src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
                                 height="200px"
                         ></v-img>
-                        <v-card-title>
-                          {{i.name}}
-                        </v-card-title>
+                          <v-card-title>
+                              <a :href="i.url"
+                                 style="text-decoration: none; color: white;" target="_blank">
+                                  {{i.name}}
+                              </a>
+                          </v-card-title>
                         <v-card-subtitle>
                           {{i.introduction}}
                         </v-card-subtitle>
@@ -331,20 +352,7 @@
               </v-card>
             </div>
 
-            <div style="text-align: center;font-size: 40px;margin-top: 50px;">
-                致全国青年大学生的倡议书
-            </div>
-
-            <div style="width: 60%;margin-left: 20%;margin-top: 20px;margin-bottom: 100px">
-                全国的青年朋友们：<br>
-                <div style="margin-left: 30px;display: inline-block;"> 2020年是决胜小康的关键之年，是我们党第一个百年奋斗目标成功实现之年</div>
-                。习近平同志在党的十九大报告高度表达了对于“三农”工作的高度重视，提出实施乡村振兴战略，强调农业农村农民问题是关系国计民生的根本性问题，必须始终把解决好“三农”问题作为全党工作重中之重。
-                三农问题看起来离我们很远，但它作为经济社会平稳运行的根本保障，实则与我们息息相关。作为祖国未来建设的排头兵，我们新时代青年能够在三农问题上发挥怎样的作用？南京大学FinTech4Good工作部的有志青年们怀着时代赋予的使命感，力图打造基于区块链可信大数据人工智能的下一代金融经济社会基础设施架构和融合计算范式。同时我们希望通过区块链、大数据、人工智能驱动金融经济社会创新，切切实实地服务三农，把学术研究写在祖国大地上，并需要更多的新鲜血液为三农问题助力。
-                在此，我们想向全国各地有志于通过金融创新来助力三农问题、服务乡村振兴的青年朋友们发出倡议：
-                加入南京大学FinTech4Good志愿者团队吧！怀着对祖国建设的使命感和金融向善的责任心，我们期待着一群志同道合的伙伴们一起通过自身的学习和奋斗，用青春和能量为三农问题助力，为祖国建设发挥自己的力量！
-                <br>
-                <div style="text-align: right">南京大学FinTech4Good工作部</div>
-            </div>
+            <v-img src="./assets/article.png" style="width: 100%;margin-top: 100px"></v-img>
         </v-content>
         <!--  底部  -->
         <v-footer
@@ -385,16 +393,21 @@
           showTabOne:false,
             groupIndex: 0,
             swiperIndex: 0,
+            swiperIndex1:0,
+            schoolIcon:require("./assets/schoolIcon.png"),
+
             organization:[{
-              name:"挪威容淳铭院士",
-              introduction:"简介1",
+              name:"挪威容淳铭院士团队",
+              introduction:"容淳铭，挪威工程院院士、IEEE(电子电气工程师协会)区块链联合主席（2018）、IEEE云计算协会主席（2017-2019）、联合国工业发展组织中挪创新中心主任、欧洲ICT标准顾问，担任中国科学院海外评审专家、中国计算机学会顾问等职，被誉为国际顶尖的计算机领域专家。",
+                url:'https://www.qdiap.com/index.php/content/142'
             },{
               name:"斯坦福大学黎子良院士团队",
-              introduction:"简介2",
-
+              introduction:"黎子良，美国数理统计学院院士，台湾中央研究院院士，美国统计学会会士。美国斯坦福大学统计系教授、统计系原系主任，斯坦福金融工程学院计算和数学工程研究所荣誉院士，斯坦福金融数学工程、金融与风险建模研究所主管。",
+                url:'https://statistics.stanford.edu/people/tze-leung-lai'
             },{
               name:"斯坦福大学Kay Giesecke教授团队",
-              introduction:"简介3",
+              introduction:"Kay Giesecke，斯坦福大学管理科学与工程教授，高级金融技术实验室主任和数学和计算金融项目主任，计算和数学工程研究所的成员，风险数据分析联合会理事会和科学顾问委员会成员，巴切利尔金融学会理事会成员。",
+                url:'https://giesecke.people.stanford.edu'
             }],
             items: [
                 {
@@ -413,11 +426,19 @@
                     src: 'https://colarhua-pic.oss-cn-shenzhen.aliyuncs.com/gary-jw-3/5.jpg\n',
                 },
             ],
-            options: [{title: "可信", content: "区块链、大数据和人工智能可以帮助提供更为可信、更为全面的金融大数据，为解决经济和社会中现存的挑战提供更为可靠的数据背景和改良指南。"},
-                {title: "安全", content: "基于区块可信大数据的下一代金融，包含了底层支撑技术、节点系统安全漏洞排查、底层共识协议和智能合约，打造更加安全的服务于经济社会的金融科技架构。"},
-                {title: "隐私保护", content: "下一代金融致力于研究适用于“去中心化”的用户隐私保护新机制。用户私钥的生成和使用，保证了用户和数据的私密性，提高经济体的自身防御能力。"},
-                {title: "高性能", content: "随着大数据时代的到来，下一代金融需要有更加全面高效的运作性能。单系统性能的提升，采用跨链技术来实现多系统的互通，提高了整个经济社会的运作效率。"},
-                {title: "有温度", content: "下一代金融更具有人文关怀和时代使命感，我们希望实现金融向善、区块链向善、AI向善、大数据向善、科技向善的目标，服务于三农问题等全面建成小康社会的新话题。"}
+            items1:[
+                {
+                    src: require("./assets/1.png"),
+                },
+                {
+                    src: require('./assets/2.png'),
+                },
+            ],
+            options: [{title: "可信的金融", content: "区块链、大数据和人工智能可以帮助提供更为可信、更为全面的金融大数据，为解决经济和社会中现存的挑战提供更为可靠的数据背景和改良指南。"},
+                {title: "安全的金融", content: "基于区块可信大数据的下一代金融，包含了底层支撑技术、节点系统安全漏洞排查、底层共识协议和智能合约，打造更加安全的服务于经济社会的金融科技架构。"},
+                {title: "隐私保护的金融", content: "下一代金融致力于研究适用于“去中心化”的用户隐私保护新机制。用户私钥的生成和使用，保证了用户和数据的私密性，提高经济体的自身防御能力。"},
+                {title: "高性能的金融", content: "随着大数据时代的到来，下一代金融需要有更加全面高效的运作性能。单系统性能的提升，采用跨链技术来实现多系统的互通，提高了整个经济社会的运作效率。"},
+                {title: "有温度的金融", content: "下一代金融更具有人文关怀和时代使命感，我们希望实现金融向善、区块链向善、AI向善、大数据向善、科技向善的目标，服务于三农问题等全面建成小康社会的新话题。"}
             ],
             humans: [
                 {
@@ -437,6 +458,8 @@
             { tab: '资源' },
             { tab: '行业新闻' },
           ],
+          photoArray:[require('./assets/人才培养/1.jpg'),require('./assets/人才培养/2.jpg'),
+              require('./assets/人才培养/3.jpg'),require('./assets/人才培养/4.png')]
 
         }),
     };
