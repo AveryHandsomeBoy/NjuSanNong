@@ -328,7 +328,8 @@
 <!--                合作机构-->
                 <v-tabs-items v-model="tab" >
                   <div style="background: grey">
-                  <v-tab-item v-for="(i,index) in 4" :key="i" v-if="index==0">
+<!--                      合作机构-->
+                  <v-tab-item>
                     <v-card  dark color="grey" v-for="i in organization" :key="i">
                       <v-card class="mx-auto">
                         <v-img
@@ -347,6 +348,68 @@
                       </v-card>
                     </v-card>
                   </v-tab-item>
+<!--          行业新闻-->
+                      <v-tab-item>
+                          <v-card  dark color="grey" v-for="i in news" :key="i">
+                              <v-card class="mx-auto">
+                                  <v-img
+                                          src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+                                          height="200px"
+                                  ></v-img>
+                                  <v-card-title>
+                                      <a :href="i.url"
+                                         style="text-decoration: none; color: white;" target="_blank">
+                                          {{i.title}}
+                                      </a>
+                                  </v-card-title>
+                                  <v-card-subtitle>
+                                      {{i.content}}
+                                  </v-card-subtitle>
+                              </v-card>
+                          </v-card>
+                      </v-tab-item>
+                      <!--          行业新闻-->
+                      <v-tab-item>
+                          <v-card  dark color="grey" v-for="i in 4" :key="i">
+                              <v-card class="mx-auto">
+                                  <v-img
+                                          src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+                                          height="200px"
+                                  ></v-img>
+                                  <v-card-title>
+                                      <a :href="i.url"
+                                         style="text-decoration: none; color: white;" target="_blank">
+                                          {{i}}
+                                      </a>
+                                  </v-card-title>
+                                  <v-card-subtitle>
+                                      {{i}}
+                                  </v-card-subtitle>
+                              </v-card>
+                          </v-card>
+                      </v-tab-item>
+<!--                      行业新闻-->
+                      <!--          行业新闻-->
+                      <v-tab-item>
+                          <v-card  dark color="grey" v-for="i in activity" :key="i">
+                              <v-card class="mx-auto">
+                                  <v-img
+                                          src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+                                          height="200px"
+                                  ></v-img>
+                                  <v-card-title>
+                                      <a :href="i.url"
+                                         style="text-decoration: none; color: white;" target="_blank">
+                                          {{i.title}}
+                                      </a>
+                                  </v-card-title>
+                                  <v-card-subtitle>
+                                      {{i.content}}
+                                  </v-card-subtitle>
+                              </v-card>
+                          </v-card>
+                      </v-tab-item>
+
                   </div>
                 </v-tabs-items>
               </v-card>
@@ -386,11 +449,28 @@
         methods: {
             changeIndex(index) {
                 this.groupIndex = index;
+            },
+            async getNews(){
+                const data = await this.$http.get(
+                    "/api/news",
+                );
+                this.news=data;
+            },
+            async getActivity(){
+                const data = await this.$http.get(
+                    "/api/getActivity",
+                );
+                this.activity=data;
             }
         },
-
+        mounted() {
+            this.getActivity();
+            this.getNews();
+        },
         data: () => ({
           showTabOne:false,
+            news:[],
+            activity:[],
             groupIndex: 0,
             swiperIndex: 0,
             swiperIndex1:0,
