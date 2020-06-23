@@ -17,17 +17,17 @@
             </div>
 
             <v-spacer></v-spacer>
-            <v-btn text>
-                <span class="mr-2">首页</span>
+            <v-btn href="#reaDirection" text>
+                <span class="mr-2">研究方向</span>
+            </v-btn>
+            <v-btn href="#reaTeam" text>
+                <span class="mr-2">研究团队</span>
+            </v-btn>
+            <v-btn href="#talTraining" text>
+                <span class="mr-2">人才培养</span>
             </v-btn>
             <v-btn text>
-                <span class="mr-2">人工智能</span>
-            </v-btn>
-            <v-btn text>
-                <span class="mr-2">业务咨询</span>
-            </v-btn>
-            <v-btn text>
-                <span class="mr-2">了解更多</span>
+                <span class="mr-2">FinTech4Good</span>
             </v-btn>
         </v-app-bar>
         <v-content class="page">
@@ -82,13 +82,14 @@
                     </div>
                     <div class="detail-image">
                         <div style="margin-left: 30px;display: inline-block;"/>
-                        未来已来，智慧把握。南京大学普惠•三农金融科技创新研究中心，依托于南京大学优质的学术资源，力图打造基于区块链可信大数据人工智能的下一代金融经济社会基础设施架构和融合计算范式。同时，我们怀着时代赋予的使命感，希望通过区块链、大数据、人工智能驱动金融经济社会创新，把学术研究写在祖国大地上。
+                        未来已来，智慧把握。南京大学普惠•三农金融科技创新研究中心，依托于南京大学优质的学术资源，打造基于区块链可信大数据人工智能的下一代金融经济社会基础设施架构和融合计算范式。同时，我们怀着时代赋予的使命感，希望通过区块链、大数据、人工智能驱动金融经济社会创新，把学术研究写在祖国大地上。
                     </div>
                 </div>
             </div>
             <!--   轮播图   -->
+			<div id="reaDirection"></div>
             <div style="text-align: center">
-                <img
+                <img 
                         :src="require('./assets/title.png')"
                         contain
                         width="20%"
@@ -113,14 +114,15 @@
                 <div style="margin-top: 20px;text-align: center;font-size: 20px;">{{options[swiperIndex].content}}</div>
             </div>
             <!--   研究团队   -->
-            <div style="text-align: center;margin-top: 100px">
+			<div id="reaTeam"></div>
+            <div  style="text-align: center;margin-top: 100px">
                 <img
                         :src="require('./assets/title2.png')"
                         contain
                         width="20%"
                 />
             </div>
-            <div style="width: 100%;text-align: center">
+            <div  style="width: 100%;text-align: center">
                 <div>
                     <v-card dark width="25%" style="margin-left: 2.5%; display: inline-block">
                         <v-card-title class="lighten-2" style="background-color: #188872;">
@@ -131,7 +133,7 @@
                         </v-card-title>
                         <v-container>
                             <v-row>
-                                <v-col>
+                                <v-col style="font-size: large;">
                                     挪威工程院院士、IEEE(电子电气工程师协会)区块链联合主席（2018）、IEEE云计算协会主席（2017-2019）、
                                     联合国工业发展组织中挪创新中心主任、欧洲ICT标准顾问，
                                     担任中国科学院海外评审专家、中国计算机学会顾问等职，被誉为国际顶尖的计算机领域专家。
@@ -148,7 +150,7 @@
                         </v-card-title>
                         <v-container>
                             <v-row>
-                                <v-col>
+                                <v-col style="font-size: large;">
                                     美国数理统计学院院士，台湾中央研究院院士，美国统计学会会士。美国斯坦福大学统计系教授、统计系原系主任，
                                     斯坦福金融工程学院计算和数学工程研究所荣誉院士，斯坦福金融数学工程、金融与风险建模研究所主管。
                                     1983年获国际统计学界COPSS奖(被视为国际统计学“诺贝尔”奖)，系该奖首位华人得主。已出版学术专著10余部，
@@ -166,7 +168,7 @@
                         </v-card-title>
                         <v-container>
                             <v-row>
-                                <v-col>
+                                <v-col style="font-size: large;">
                                     曾师从斯坦福大学先进金融科技实验室主任，获经济金融博士学位、统计学博士学位（辅），并有在摩根大通、摩根斯坦利、
                                     全球顶尖对冲基金城堡对冲基金公司等世界金融名企的工作经历，长期致力于大数据人工智能金融科技的理论积累和实战探索。
                                     在UTDallas Top 24期刊上发表过数篇论文，其中一篇引用数在同期刊同年论文中排名第一，十年论文中排前2.4%。
@@ -183,13 +185,13 @@
                         fill-dot
                         right
                 >
-                    <v-card style="margin-right: 100px">
+                    <v-card style="margin-right: 140px">
                         <v-card-title class="purple lighten-2">
                             <h2 class="display-1 white--text font-weight-light">区块链实验室</h2>
                         </v-card-title>
                         <v-container>
                             <v-row>
-                                <v-col cols="12">
+                                <v-col >
                                     区块链涉及数学、密码学、互联网和计算机编程等很多科学技术问题。从应用视角来看，简单来说，区块链是一个分布式的共享账本和数据库，具有去中心化、不可篡改、全程留痕、可以追溯、集体维护、公开透明等特点。
                                 </v-col>
                             </v-row>
@@ -203,7 +205,7 @@
                         small
                         left
                 >
-                    <v-card style="margin-left: 100px">
+                    <v-card style="margin-left: 140px">
                         <v-card-title class="red lighten-2">
                             <h2 class="display-1 white--text font-weight-light" style="width: 100%;text-align: right">
                                 人工智能实验室</h2>
@@ -223,7 +225,7 @@
                         fill-dot
                         right
                 >
-                    <v-card style="margin-right: 100px">
+                    <v-card style="margin-right: 140px">
                         <v-card-title class="green lighten-2">
                             <h2 class="display-1 white--text font-weight-light">大数据实验室</h2>
                         </v-card-title>
@@ -243,7 +245,7 @@
                         small
                         left
                 >
-                    <v-card style="margin-left: 100px">
+                    <v-card style="margin-left: 140px">
                         <v-card-title class="blue lighten-2">
                             <h2 class="display-1 white--text font-weight-light" style="width: 100%;text-align: right">
                                 FinTech4Good工作部</h2>
@@ -260,7 +262,7 @@
                 </v-timeline-item>
             </v-timeline>
             <!--   模块介绍   -->
-            <v-img
+            <v-img id="talTraining"
                     src="./assets/人才培养/title.png"
                     style="width: 30%;margin-left: 35%"
                     contain
@@ -522,7 +524,7 @@
             ],
             humans: [
                 {
-                    title: "金融+科技创新创业人才培养",
+                    title: "创新金融+科技人才培养",
                     content: "南京大学普惠•三农金融科技创新研究中心将以培养跨学科交叉融合的人才为目标，开展更多的教学创新，希望培养一批真正既热爱金融、也热爱科技的优秀人才。从华尔街2008年危机之后来看，金融和科技的融合是大趋势。金融（经济和社会也是一样）的发展可以通过技术来驱动，因此金融人才要懂技术；而技术人才也要懂金融，那样才能对金融的内在规律特别是风险有一颗敬畏之心。而且要用金融+科技武装他们的头脑，解决金融、经济、社会痛点问题，为祖国经济社会进步服务。"
                 },
                 {
