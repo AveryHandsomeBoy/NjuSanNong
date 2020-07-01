@@ -16,9 +16,14 @@
 			<v-btn href="#talTraining" text>
 				<span class="mr-2">人才培养</span>
 			</v-btn>
-			<v-btn text>
-				<span class="mr-2">FinTech4Good</span>
+			
+			<v-btn text >
+				<!-- newWebPage/FinTech4Good.html -->
+				<!-- 这里网页跳转可以 本地跳转跳转不了 你改一下吧 -->
+				<span class="mr-2"><a href="file:///D:/CodeSpace/projectSpace/NjuSanNong/font-end/src/newWebPage/FinTech4Good.html">FinTech4Good</a></span>
 			</v-btn>
+			
+			
 		</v-app-bar>
 		<v-content class="page">
 			<!--      第一张图片  -->
